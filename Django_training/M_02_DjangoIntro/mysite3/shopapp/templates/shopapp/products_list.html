@@ -1,0 +1,33 @@
+{% extends "shopapp/base.html" %}
+
+{% block title %}
+Products List
+{% endblock %}
+
+{% block body %}
+<h1>Products:</h1>
+{% if products %}
+    <div>
+        {% for product in products %}
+            <div>
+                <p>Name: {{ product.name }}</p>
+                <p>Price: {{ product.price }}</p>
+                <p>Discount: {% firstof product.dicount "no discount" %}</p>
+            </div>
+        {% endfor %}
+
+    </div>
+
+{% else %}
+    <h3>No products yet</h3>
+{% endif %}
+
+
+<div>
+    <!--Создадим ссылку на страницу создания продукта-->
+    <a href="{% url 'shopapp:product_create' %}">Create a new product</a>
+<!--url - это функция, которая принимает имя приложения и имя ссылки,
+и первое и второе указано в файле URLS.PY -->
+</div>
+
+{% endblock %}

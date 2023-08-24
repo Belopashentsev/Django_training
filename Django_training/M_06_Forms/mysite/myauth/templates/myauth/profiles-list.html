@@ -1,0 +1,37 @@
+{% extends 'shopapp/base.html' %}
+
+{% block title %}
+  Profiles list
+{% endblock %}
+
+{% block body %}
+  <h1>Profiles:</h1>
+  <hr size="3" width="30%" align="left" color="gray">
+
+  {% if profiles %}
+
+    <div>
+    {% for profile in profiles %}
+      <div>
+        <p>{{ user.is_superuser }}</p>
+        <p>Name: {{ profile.user }}</p>
+        <p>BIO: {{ profile.bio }}</p>
+        {% if profile.avatar %}
+          <img src="{{ profile.avatar.url }}" alt="{{ profile.avatar.name }}">
+        {% else %}
+          <div>No images here</div>
+        {% endif %}
+        <p></p>
+        {% if user.is_superuser or profile.user.id == user.id %}
+          <a href="{% url 'myauth:about_me' pk=profile.pk %}">Show profile</a>
+        {% endif %}
+      </div>
+      <hr size="3" width="30%" align="left" color="gray">
+    {% endfor %}
+    </div>
+
+  {% else %}
+    <h3>No profiles yet</h3>
+  {% endif %}
+
+{% endblock %}

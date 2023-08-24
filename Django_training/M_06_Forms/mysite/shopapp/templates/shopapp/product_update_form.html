@@ -1,0 +1,25 @@
+{% extends 'shopapp/base.html' %}
+
+{% block title %}
+    Update product
+{% endblock %}
+
+{% block body %}
+  {% if perms.shopapp.change_product %}
+
+    <h1>Update product</h1>
+    <div>
+        <form method="post" enctype="multipart/form-data">
+<!--"multipart/form-data" говорит о том, что через форму будут загружены бинарные данные-->
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Update</button>
+        </form>
+    </div>
+  {% endif %}
+    <div>
+        <a href="{% url 'shopapp:product_detail' pk=object.pk %}">To product #{{ object.pk }}</a>
+    </div>
+
+
+{% endblock %}
