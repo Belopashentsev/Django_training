@@ -1,0 +1,30 @@
+{% extends 'mainapp/common.html' %}
+
+{% load static %}
+
+{% block content %}
+    {% include 'mainapp/includes/inc__menu.html' %}
+    <hr>
+    <h1>Каталог</h1>
+    {% include 'mainapp/includes/inc__catalog_menu.html' %}
+
+    <figure><img src="/media/{{ hot_product.image }}" width="300" height="200" alt="{{ hot_product.name }}">
+        <figcaption><a href="{% url 'main:product_page' pk=hot_product.pk %}">{{ hot_product.name }}</a>
+        </figcaption>
+    </figure>
+
+    <div class="description">
+        <h3 class="red">горячее предложение</h3>
+        <p class="price">{{ hot_product.price }}<span>&#8381;</span></p>
+        <form>
+            <p id="button_buy">
+                <a href="{% url 'basket:add' pk=hot_product.pk %}">
+                    <input type="button" value="Купить" class="buy">
+                </a>
+            </p>
+        </form>
+        <div class="description-text">
+            <p>{{ hot_product.short_desc }}</p>
+        </div>
+    </div>
+{% endblock %}

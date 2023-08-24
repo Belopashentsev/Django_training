@@ -1,0 +1,890 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    background-color: #f8f8f8;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    height: 70px;
+    background-color: #F5DEB3;
+}
+
+.menu {
+    padding-top: 22px;
+    padding-right: 25px;
+    float: right;
+    list-style-type: none;
+}
+
+.menu li {
+    /*overflow: hidden;*/
+    /*padding-left: 25px;    */
+    /*!*list-style-type: none;*!*/
+    /*display: inline-block;*/
+    float: left;
+}
+
+.menu li a {
+    color: #4d4d4d;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: right;
+    padding: 10px 13px;
+}
+
+.menu .active {
+	color: #212121;
+	font-weight: 700;
+	border-bottom: 3px solid #212121;
+}
+
+.header img[alt="label"] {
+    outline: 1px solid #8b4513;
+    float: left;
+    margin-top: 3px;
+    margin-left: 1px;
+}
+
+.menu li a:hover {
+    color: #ff4500;
+}
+
+.footer {
+    height: 30px;
+    width: 100%;
+    background-color: #D3D3D3;
+    text-align: right;
+    padding-top: 5px;
+    padding-right: 25px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    clear: both;
+}
+
+figure {
+    background: #D2B48C; /* Цвет фона */
+    padding: 10px; /* Поля вокруг */
+    width: 300px; /* Ширина */
+    float: left; /* Блоки выстраиваются по горизонтали */
+    margin: 0 10px 10px 0; /* Отступы */
+    text-align: center; /* Выравнивание по центру */
+}
+
+figcaption a {
+    color: #2F4F4F;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.text_header {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #eaeaea;
+    overflow: hidden;
+    text-align: center;
+}
+
+/*a img {*/
+/*    outline: 2px solid #414a4c;*/
+/*    border-radius: 50%;*/
+/*    margin-right: 15px;*/
+/*    margin-bottom: 20px;*/
+/*    float: left;*/
+/*}*/
+
+a img:hover {
+    outline-style: none;
+}
+
+a[target="_blank"] + .text_header {
+    display: inline-block;
+    width: 765px;
+}
+
+.short_description {
+    color: #707070;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+    display: inline-block;
+}
+
+.short_description:first-letter, .full_description:first-letter {
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 2em;
+}
+
+.full_description {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+
+
+#button_buy {
+    text-align: center;
+}
+
+.buy {
+  font-weight: 700;
+  background: rgb(64,199,129);
+  height:30px;
+  width: 100px;
+  outline: 1px solid #000;
+  cursor:pointer;
+}
+
+.buy:hover {
+    background: rgb(53, 167, 110);
+    outline: 1px solid #000;
+}
+
+.buy:focus {
+    background:#9ACD32;
+    outline: 1px solid #696969;
+}
+
+.buy:active {
+  background: rgb(33,147,90);
+  box-shadow: 0 3px rgb(33,147,90) inset;
+}
+
+#name, #mail, #theme, #text {
+    color: #293133;
+    font-weight: 900;
+    padding: 5px;
+}
+
+input[placeholder="Имя"], input[placeholder="Email"], input[placeholder="Тема"] {
+    height: 25px;
+    width: 250px;
+    background-color: beige;
+    color: black;
+    line-height: 25px;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.comment textarea {
+    background-color: beige;
+    margin: 3px;
+    width: 318px;
+    padding: 5px;
+    height: 160px;
+    font-family: Gothic fantasy;
+    font-size: 1.1em;
+}
+
+input[placeholder="Email"]:focus {
+    background-color: #dcdcdc;
+    color: #800000;
+}
+
+input[placeholder="Имя"]:focus, input[placeholder="Тема"]:focus, .comment textarea:focus {
+    text-transform: capitalize;
+}
+
+.box_cured_sausage {
+    border: 3px solid #414a4c;
+    width: 400px;
+    height: 100px;
+    border-collapse: collapse;
+}
+
+.box_cured_sausage tr td {
+    border: 1px solid #414a4c;
+    text-align: center;
+    color: #778899;
+    font-size: 16px;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.links {
+	height: 70px;
+	background-color: #f4f4f4;
+	position: relative;
+	padding-left: 360px;
+}
+
+.links-menu {
+	margin:	27px auto 0;
+	position: absolute;
+}
+
+.links-menu li {
+	float: left;
+	list-style-type: none;
+	padding-right: 42px;
+}
+
+.links-menu li a {
+	text-decoration: none;
+	color:  #6c6c6c;
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.links-menu .active {
+	color:  #212121;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.links-menu li a:hover {
+	color:  #212121;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.links-menu li a:active {
+	color:  #6c6c6c;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.login {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 25px;
+    overflow: hidden;
+    width: 28em;
+    min-width: 500px;
+    margin: 100px auto;
+
+    position: relative;
+    display: block;
+}
+
+.login .head {
+    margin: 15px auto;
+}
+
+.login .form-control[type="submit"] {
+    margin: 10px auto;
+}
+
+.login button {
+    border: 1px solid #eaeaea;
+    margin-bottom: 10px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+.login button.last {
+    margin-bottom: 25px;
+}
+
+.login button a, .login button a:hover {
+    border: 1px solid #eaeaea;
+    color: #555;
+    text-decoration: none;
+}
+
+.login form {
+    margin-bottom: 10px;
+}
+
+.login div.user_avatar {
+    position: fixed;
+    left: 175px;
+    top: 200px;
+}
+
+.user_avatar img {
+    width: 300px;
+    border-radius: 25px;
+}
+
+.basket_container {
+    margin: 25px auto;
+    width: 700px;
+}
+
+.basket_list input[type="number"] {
+    width: 3em;
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.basket_list span.category_name {
+    margin-left: 2em;
+    margin-right: 1em;
+    width: 5em;
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.basket_list span.product_name {
+    margin-left: 1em;
+    width: 8em;
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.basket_list span.product_price {
+    margin-left: 1em;
+    width: 7em;
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.basket_list span.product_cost {
+    margin-left: 1em;
+    width: 7em;
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.basket_list .basket_record {
+    position: relative;
+    display: block;
+    height: 170px;
+    float: none;
+}
+
+.basket_container .head {
+    margin: 25px auto;
+}
+
+.basket_container button {
+    margin-left: 25px;
+    width: 150px;
+    display: block;
+    float: left;
+}
+
+.basket_container button a {
+    text-decoration: none;
+    color: #555;
+}
+
+.basket_container img {
+    display: block;
+    float: left;
+    width: 150px;
+    border-radius: 25px;
+}
+
+.basket_container input[type="submit"] {
+    width: 150px;
+    display: block;
+    float: left;
+    margin-bottom: 25px;
+}
+
+.basket_container .basket_summary {
+    display: block;
+    margin-left: 50px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.description {
+	width: 535px;
+	float: right;
+	padding-left: 35px
+}
+
+.description .red {
+	text-transform: uppercase;
+	color: #e53935;
+	font-size: 18px;
+	font-weight: 700;
+	text-align: center;
+	letter-spacing: 1px;
+	line-height: 17px;
+	margin-top: 23px;
+	margin-bottom: 36px;
+}
+
+.description .price {
+	color:  #212121;
+	font-size: 72px;
+	font-weight: 300;
+	line-height: 48px;
+	text-align: center;
+}
+
+.description .price span {
+	color:  #212121;
+	font-size: 36px;
+	font-weight: 300;
+	line-height: 48px;
+	text-align: center;
+}
+
+.description-text {
+	margin-top: 50px;
+	color:  #212121;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 24px;
+	text-align: left;
+}
+
+.description-text p {
+	margin-bottom: 0.5em;
+}
+
+.admin_container .h2 {
+    margin-top: 10px;
+}
+
+.admin_menu {
+    display: block;
+    left: 15px;
+    top: 20px;
+    height: 40px;
+    width: 100%;
+}
+
+.admin_menu ul.menu{
+    display: block;
+    float: none;
+    width: 550px;
+    height: 50px;
+    margin: auto;
+    color: #555;
+}
+
+.users_list {
+    margin-left: 150px;
+}
+
+.users_list a {
+    color: #555;
+    text-decoration: none;
+}
+
+.users_list .new_user {
+    margin-left: 190px;
+}
+
+.users_list button {
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    height: 30px;
+    margin: 5px auto;
+    padding: 0 15px;
+}
+
+.user_record {
+    height: 125px;
+    margin: 15px auto;
+    position: relative;
+}
+
+.user_record.not_active {
+    opacity: 0.5;
+}
+
+.user_record img {
+    display: block;
+    float: left;
+    height: 125px;
+    border-radius: 25px;
+}
+
+.user_record .user_name {
+    display: block;
+    float: left;
+    margin-top: 15px;
+    margin-left: 25px;
+    width: 175px;
+}
+
+.user_record .user_name a {
+    color: #555;
+}
+
+.user_record .user_name p {
+    /*font-weight: bold;*/
+    margin: 10px auto;
+}
+
+.user_record .user_email {
+    display: block;
+    float: left;
+    margin-top: 40px;
+    margin-left: 25px;
+    width: 175px;
+}
+
+.user_record .user_age {
+    display: block;
+    float: left;
+    margin-top: 40px;
+    margin-left: 25px;
+    width: 45px;
+}
+
+.user_record .user_role {
+    display: block;
+    float: left;
+    margin-top: 15px;
+    margin-left: 25px;
+    width: 125px;
+}
+
+.user_record .user_lastlogin {
+    display: block;
+    float: left;
+    margin-top: 40px;
+    margin-left: 25px;
+    width: 175px;
+}
+
+.user_delete {
+    margin: 50px auto;
+    width: 600px;
+    font-size: 150%;
+}
+
+.user_delete .btn {
+    display: block;
+    float:left;
+    margin: 25px;
+    width: 150px;
+    color: #111;
+}
+
+.user_delete a {
+    color: #111;
+    text-decoration: none;
+}
+
+.categories_list {
+    margin-left: 150px;
+}
+
+.categories_list .new_category {
+    margin-left: 200px;
+}
+
+.categories_list button {
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    height: 30px;
+    margin: 5px auto;
+    padding: 0 15px;
+}
+
+.categories_list a {
+    color: #555;
+    text-decoration: none;
+}
+
+.category_record {
+    height: 125px;
+    margin: 15px auto;
+    position: relative;
+}
+
+.category_record.not_active {
+    opacity: 0.5;
+}
+
+.categories_list .category_name {
+    display: block;
+    float: left;
+    margin-top: 15px;
+    margin-left: 25px;
+    width: 150px;
+    font-size: 150%;
+}
+
+.category_record .category_actions {
+    display: block;
+    float: left;
+    margin-top: 0;
+    margin-left: 25px;
+    width: 175px;
+}
+
+.category_record .category_desc {
+    display: block;
+    float: left;
+    margin-top: 0;
+    margin-left: 25px;
+    width: 300px;
+}
+
+.new_category_form {
+    margin: 0 auto;
+    width: 600px;
+}
+
+.user_delete {
+    margin: 50px auto;
+    width: 600px;
+    font-size: 150%;
+}
+
+.user_delete .btn {
+    display: block;
+    float:left;
+    margin: 25px;
+    width: 150px;
+    color: #111;
+}
+
+.user_delete a {
+    color: #111;
+    text-decoration: none;
+}
+
+.products_list .title {
+    margin: 20px auto;
+    height: 50px;
+    float: none;
+}
+
+.products_list .title h2 {
+    margin-top: 0;
+    float: left;
+}
+
+.products_list .title .paginator{
+    display: block;
+    position: relative;
+    left: 75px;
+    top: 15px;
+    margin-left: 25px;
+    color: #555;
+    float: left;
+}
+
+.paginator a, .paginator a:visited {
+    color: #555;
+    text-decoration: none;
+}
+
+.products_list .title .price_bounds{
+    display: block;
+    position: relative;
+    left: 25px;
+    top: 15px;
+    margin-left: 25px;
+    text-decoration: none;
+    color: #555;
+    float: left;
+}
+
+.product_record {
+    height: 125px;
+    margin: 15px auto;
+    position: relative;
+}
+
+.product_record.not_active {
+    opacity: 0.5;
+}
+
+.product_record .product_name {
+    display: block;
+    float: left;
+    margin-top: 25px;
+    margin-left: 25px;
+    width: 250px;
+    font-size: 150%;
+}
+
+.product_record .product_actions {
+    display: block;
+    float: left;
+    margin-top: 0;
+    margin-left: 25px;
+    width: 135px;
+}
+
+.product_record .product_desc {
+    display: block;
+    float: left;
+    margin-top: 15px;
+    margin-left: 25px;
+    width: 350px;
+}
+
+.product_record .summary {
+    display: block;
+    float: left;
+    margin-top: 15px;
+    margin-left: 25px;
+    width: 100px;
+}
+
+.product_record img {
+    display: block;
+    float: left;
+    height: 125px;
+    width: 125px;
+    border-radius: 25px;
+}
+
+.new_category_form {
+    margin: 0 auto;
+    width: 600px;
+}
+
+.paginator{
+    display: block;
+    left: 75px;
+    top: 15px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #555;
+}
+
+.paginator a, .paginator a:visited {
+    color: #555;
+    text-decoration: none;
+}
+
+.product_read {
+    margin: 0 auto;
+    width: 1000px;
+    height: 600px;
+}
+
+.product_read img {
+    display: block;
+    float:left;
+    margin-top: 25px;
+    border-radius: 25px;
+}
+
+.product_read .product_name {
+    display: block;
+    margin: 0 auto;
+    width: 350px;
+}
+
+.product_read .summary {
+    display: block;
+    float: left;
+    margin-left: 35px;
+    margin-top: 30px;
+    width: 150px;
+}
+
+.product_read .product_desc {
+    display: block;
+    float: left;
+    margin-left: 35px;
+    margin-top: 45px;
+    width: 400px;
+}
+
+.product_read strong {
+    font-size: 150%;
+    margin-left: 15px;
+}
+
+.product_read button {
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    height: 30px;
+    margin: 0 auto;
+    width: 135px;
+    padding: 0 15px;
+}
+
+.product_read a {
+    color: #555;
+    text-decoration: none;
+}
+
+.order_container {
+    margin: 25px auto;
+    width: 900px;
+}
+
+.order_container button a {
+    text-decoration: none;
+    color: #555;
+}
+
+.order_container img {
+    display: block;
+    float: left;
+    width: 150px;
+    border-radius: 25px;
+}
+
+.table.orders_list {
+    min-width: 600px;
+}
+
+.td1.orders_list {
+    width: 40px;
+}
+
+.table.order.formset {
+    min-width: 400px;
+}
+
+.td1.order.formset_td {
+    /*width: 70%;*/
+}
+
+.td2.order.formset_td {
+    /*width: 50px;*/
+}
+
+.td3.order.formset_td {
+    /*width: 50px;*/
+    text-align: center;
+}
+
+.td4.order.formset_td {
+    /*width: 50px;*/
+    text-align: center;
+}
+
+.category_delete {
+    margin: 50px auto;
+    width: 600px;
+    font-size: 150%;
+}
+
+.category_delete .btn {
+    display: block;
+    float:left;
+    margin: 25px;
+    width: 150px;
+    color: #111;
+}
+
+.category_delete a {
+    color: #111;
+    text-decoration: none;
+}

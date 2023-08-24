@@ -1,0 +1,39 @@
+{% extends 'mainapp/common.html' %}
+
+{% block content %}
+    {% include 'mainapp/includes/inc__menu.html' %}
+    <hr>
+    <h2 style="text-align: left; font-family: sans-serif">Напишите нам</h2>
+    <form action="#">
+        <p id="name">Имя
+            <br>
+            <input type="text" placeholder="Имя"></p>
+        <p id="mail">Email
+            <br>
+            <input type="email" placeholder="Email"></p>
+        <p id="theme">Тема
+            <br>
+            <input type="text" size="30" placeholder="Тема"></p>
+        <p id="text">Текст обращения</p>
+        <p class="comment">
+            <textarea cols="50" rows="15"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Отправить сообщение">
+            <input type="reset" value="Очистить форму"></p>
+    </form>
+    <p>Мы&nbsp;работаем ПН-ВС с&nbsp;10-00 до&nbsp;22-00</p>
+    <h3>Наши контакты</h3>
+    {% for location in locations %}
+        <div class="location" style="float: left; margin-right: 30px">
+            <h4>{{ location.city }}</h4>
+            <h5>Телефон</h5>
+            <p>{{ location.phone }}</p>
+            <h5>e-mail</h5>
+            <p>{{ location.email }}</p>
+            <h5>Адрес</h5>
+            <p>{{ location.address }}</p>
+        </div>
+    {% endfor %}
+
+{% endblock %}

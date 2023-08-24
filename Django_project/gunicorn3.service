@@ -1,0 +1,12 @@
+[Unit]
+Description=shop daemon
+After=network.target
+
+[Service]
+User=Dmitry
+Group=www-data
+WorkingDirectory=/home/dmitry/PycharmProjects/Python_django_diploma_dpo/shop
+ExecStart=/home/dmitry/.local/bin/gunicorn --access-logfile server.logs --workers 2 --bind unix:/home/anna/shop/shop.sock shop.wsgi
+
+[Install]
+WantedBy=multi-user.target

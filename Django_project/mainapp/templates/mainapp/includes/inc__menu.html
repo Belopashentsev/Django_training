@@ -1,0 +1,66 @@
+{% load static %}
+
+<div class="header clearfix"><img src="{% static 'img/logo.jpg' %}" alt="label">
+    <ul class="menu">
+        <li>
+            <a href="{% url 'main:index' %}"
+               class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}">
+                Главная
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'main:catalog' %}"
+               class="{% if request.resolver_match.url_name == 'catalog' or request.resolver_match.url_name == 'category' %}active{% endif %}">
+                Каталог
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'main:contacts' %}"
+               class="{% if request.resolver_match.url_name == 'contacts' %}active{% endif %}">
+                Контакты
+            </a>
+        </li>
+        {% if user.is_authenticated %}
+            <li>
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="" data-toggle="dropdown">
+                        {{ user.first_name|default:'Пользователь' }}
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="{% url 'auth:profile' %}">
+                                Мой профиль
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'ordersapp:index' %}">
+                                Мои заказы
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        {% endif %}
+        {% if user.is_superuser %}
+            <li><a href="{% url 'my_admin:index' %}">
+                Админка
+            </a></li>
+        {% endif %}
+        {% if user.is_authenticated %}
+            <li><a href="{% url 'auth:logout' %}">Выход</a></li>
+        {% else %}
+            <li><a href="{% url 'auth:login' %}">Вход</a></li>
+        {% endif %}
+        <li><a href="#" class="search">Поиск&nbsp;&#8981;</a></li>
+        {% if user.is_authenticated %}
+            <li>
+                <a href="{% url 'basket:index' %}" class="basket">
+                    Корзина&#8487; {{ user.basket_cost|floatformat:0 }} &#8381; ({{ user.basket_total_quantity }} шт)
+                </a>
+            </li>
+        {% endif %}
+    </ul>
+
+
+</div>
